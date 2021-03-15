@@ -67,7 +67,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
               return AlertDialog(
                 // Retrieve the text the that user has entered by using the
                 // TextEditingController.
-                content: Text(""),
+                content: Text("votre imc est " + indice().toString()),
               );
             },
           );
@@ -81,12 +81,13 @@ class _MyCustomFormState extends State<MyCustomForm> {
   int indice() {
     double t = 0;
     double p = 0;
-    try
-    {
-      t=double.parse(taille.text);
-      p=double.parse(poid.text);
-
-
+    try {
+      t = double.parse(taille.text);
+      p = double.parse(poid.text);
+      double imc = p / (t * t);
+      return imc.round();
+    } catch (exp) {
+      return -1;
     }
   }
 }
