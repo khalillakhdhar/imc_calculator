@@ -83,8 +83,8 @@ class _MyCustomFormState extends State<MyCustomForm> {
     double p = 0;
     try
     {
-      t=double.parse(taille.text)
-      t=double.parse(taille.text)
+      t=double.parse(taille.text);
+      p=double.parse(poid.text);
 
 
     }
