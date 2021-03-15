@@ -72,13 +72,21 @@ class _MyCustomFormState extends State<MyCustomForm> {
             },
           );
         },
-        tooltip: 'tester mon age !',
-        child: Icon(Icons.text_fields),
+        tooltip: 'appuyez pour obtenir l IMC !',
+        child: Icon(Icons.calculate),
       ),
     );
   }
 
   int indice() {
-    return 0;
+    double t = 0;
+    double p = 0;
+    try
+    {
+      t=double.parse(taille.text)
+      t=double.parse(taille.text)
+
+
+    }
   }
 }
